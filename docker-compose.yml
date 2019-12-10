@@ -1,0 +1,8 @@
+version: "3.2"
+
+services:
+  koa_start:
+    image: koa_start
+    ports:
+      - 3100:3100
+    restart: always

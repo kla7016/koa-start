@@ -8,6 +8,7 @@ const port = 3100;
 const app = new Koa();
 const router = new KoaRouter();
 const api = require("./api/api");
+const config = require("config");
 // Use as middleware
 app.use(bodyParser());
 app.use(KoaJson());
@@ -27,7 +28,12 @@ app.use(async (ctx, next) => {
   ctx.set("X-Response-Time", `${ms}ms`);
 });
 
-router.get("/", ctx => (ctx.body = { text: "Hello World" }));
+router.get("/", (ctx, next) => {
+  ctx.body = {
+    text: "Hello World",
+    env: config.get("env")
+  };
+});
 
 app.use(router.routes()).use(router.allowedMethods());
 app.use(api.routes(), api.allowedMethods());
