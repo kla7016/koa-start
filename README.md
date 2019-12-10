@@ -15,3 +15,9 @@ npm run dev
 ```
 npm run test
 ```
+
+## Env แก้ที่ folder config
+
+```
+config.get("env")
+```
