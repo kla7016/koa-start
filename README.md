@@ -1,4 +1,4 @@
-## install nodemon
+## install nodemon for hot reload (ลงแค่ครั้งแรก)
 
 ```
 sudo npm i -g nodemon
@@ -10,24 +10,8 @@ sudo npm i -g nodemon
 npm run dev
 ```
 
-## Lib for test
-
-```
-npm i chai-http mocha chai --save-dev
-```
-
 ## Test Script
 
 ```
 npm run test
-```
-
-## Install Koa Generator
-
-```
-sudo npm i -g koa-generator
-```
-
-```
-https://www.npmjs.com/package/koa-generator
 ```
